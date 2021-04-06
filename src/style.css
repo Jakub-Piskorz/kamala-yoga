@@ -1,0 +1,413 @@
+@import "fonts/century-gothic/century-gothic.css";
+@import "fonts/lexend/lexend.css";
+
+/* General */
+* {
+    box-sizing: border-box;
+}
+body {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Century Gothic", "Lexend", Tahoma, Verdana, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 21px;
+}
+
+h1 {
+  font-size: 3.4em;
+  color: #252525;
+  margin-bottom: 15px;
+}
+h2 {
+  font-size: 2.8em;
+  color: #252525;
+}
+h3 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #252525;
+}
+strong {
+  font-weight: bold;
+  color: #bf0000;
+}
+a {
+  color: #4c2dd4;
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:hover {
+  color: #6e50f5;
+}
+p:empty {
+  display: none;
+}
+.yoga-button {
+  all: unset;
+  font-family: "Century Gothic", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 40px;
+  background-color: #9f69d1;
+  padding: 0.7em 4.1em 0.7em 1.9em;
+  border-radius: 9px;
+  font-size: 1.15em;
+  color: white;
+  position: relative;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.yoga-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  padding: 2em 1.28em;
+  background-color: rgba(255, 255, 255, 0.384);
+}
+
+.yoga-button:before {
+  content: "";
+  position: absolute;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 4px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  right: 1.1em;
+}
+.yoga-button:hover {
+  background-color: #b68adf;
+}
+
+.small-button {
+  all: unset;
+  font-weight: 700;
+  color: white;
+  font-family: "Century Gothic", Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  padding: 10px 36px 10px 19px;
+  background-color: #9f69d1;
+  border-radius: 7px;
+  position: relative;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.small-button:after {
+  position: absolute;
+  content: "";
+  position: absolute;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  right: 22px;
+}
+.small-button:hover {
+  background-color: #b68adf;
+}
+p {
+  color: #62556f;
+  font-family: Lexend;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.55em;
+  margin-bottom: 0.4em;
+}
+img {
+    max-width: 100%;
+}
+/* Header */
+header {
+    width: 1200px;
+    max-width: 80%;
+    margin: auto;
+    padding-top: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header > a {
+    font-size: 2.6em;
+    color: #a341ff;
+    font-weight: 600;
+}
+header > a:hover {
+    color: #b76aff;
+}
+.main-menu {
+  display: flex;
+  height: 100px;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.4em;
+}
+.main-menu ul,
+.main-menu ul li {
+  all: unset;
+  color: initial;
+}
+.main-menu ul li a {
+    color: black;
+    margin-left: 1em;
+}
+.main-menu ul li a:hover {
+    color: rgb(147, 29, 216);
+}
+/* Footer */
+footer {
+  width: 1200px;
+  max-width: 80%;
+  margin: auto;
+  padding: 25px 0 15px;
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #837294;
+}
+
+/* Homepage */
+#home,
+#yoga-description,
+#classes {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  max-width: 80%;
+  margin: auto;
+}
+
+#home {
+  flex-direction: row;
+  min-height: 500px;
+  margin-top: 5.2em;
+  margin-bottom: 6em;
+}
+
+#home > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+#home > div:nth-of-type(2) {
+  text-align: right;
+  flex-direction: column;
+  width: 40%;
+}
+
+#home .img {
+  max-width: 100%;
+  margin-left: -10%;
+}
+
+#yoga-description {
+  width: 100%;
+  max-width: unset;
+  background-color: #fcf8ff;
+  margin: 0;
+}
+
+#yoga-description > div {
+  width: 1200px;
+  max-width: 80%;
+  margin: auto;
+  padding: 5.9em 0;
+  display: flex;
+  flex-direction: row;
+}
+
+#yoga-description > div > div {
+  width: 50%;
+}
+
+#yoga-description > div > div:nth-of-type(2) {
+  width: 50%;
+  margin-right: -70px;
+}
+
+#yoga-description > div > div:nth-of-type(1) {
+  padding-right: 50px;
+}
+
+#yoga-description .img {
+  width: 100%;
+}
+
+#classes {
+  align-items: center;
+  padding: 5em 0;
+}
+#classes h2 {
+  margin-bottom: 0px;
+}
+#classes > div {
+  display: flex;
+  width: 1000px;
+  max-width: 100%;
+  margin-top: 3em;
+  flex-direction: raw;
+  justify-content: space-between;
+}
+#classes .img {
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+#classes > div > div {
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+}
+#classes h3 {
+  margin: 0;
+}
+#about {
+  background-color: #fcf8ff;
+  width: 100%;
+  margin: 60px auto 0;
+}
+#about > div {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  padding: 85px 0 120px;
+  margin: auto;
+  max-width: calc(100% - 100px);
+}
+#about > div > div {
+  width: 40%;
+}
+#about > div > div:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about > div > div:nth-of-type(2) {
+  width: 60%;
+  padding-left: 50px;
+  text-align: center;
+}
+#about h2 {
+  margin: 30px 0;
+}
+
+#about .img {
+  max-height: 420px;
+}
+
+@media screen and (max-width: 1600px) {
+  body {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  body {
+    font-size: 19px;
+  }
+  header > a {
+    font-size: 2em;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    text-align: center;
+  }
+  #home {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #home > div,
+  #home > div:nth-of-type(2) {
+    width: 100%;
+    margin: 0;
+  }
+  #home .img {
+    margin: 0 -30px 10px 0;
+    width: 90%;
+    max-width: 400px;
+  }
+  #yoga-description > div,
+  #about > div {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+  #yoga-description > div > div,
+  #about > div > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #yoga-description > div {
+    flex-direction: column-reverse;
+  }
+  #yoga-description > div > div:nth-of-type(1),
+  #about > div > div:nth-of-type(2) {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    max-width: 800px;
+    text-align: center;
+  }
+  #yoga-description > div > div:nth-of-type(2),
+  #about > div > div:nth-of-type(1) {
+    justify-content: center;
+    margin: auto;
+  }
+  #yoga-description .img {
+    width: 90%;
+    margin: auto;
+  }
+  #classes > div {
+    align-items: flex-start;
+    width: 100%;
+  }
+  #about .img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    margin: auto;
+  }
+  #about > div > div:nth-of-type(1) {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 16px;
+  }
+  header > a {
+    font-size: 1.5em;
+  }
+  .main-menu a {
+    font-size: 0.8em;
+  }
+  h1,
+  h2 {
+    font-size: 2.5rem;
+  }
+  #classes > div {
+    flex-direction: column;
+  }
+  #classes > div > div {
+    margin: 0 auto 2em;
+    width: 100%;
+    max-width: 500px;
+  }
+  #classes > div > div:nth-of-type(1) {
+    margin-bottom: 4em;
+  }
+}
