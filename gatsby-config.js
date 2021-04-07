@@ -26,7 +26,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url: process.env.WPGRAPHQL_URL || `http://kamalayoga/graphql`,
+        url: process.env.WPGRAPHQL_URL || `http://yogakamala.jakubpiskorz.pl/graphql`,
         develop: {
           //caches media files outside of Gatsby's default cache an thus allows them to persist through a cache reset.
           hardCacheMediaFiles: true,
