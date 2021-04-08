@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
-import {redirectTo} from "@reach/router";
+import React, {useState, useEffect} from "React"
+import {Router, Route, Redirect} from "@reach/router"
 
 const Edytuj = () => {
-    useEffect(() => {
-        redirectTo("http://yogakamala.jakubpiskorz.pl/wp-admin");
-    }, []);
-    return <h1>Redirecting...</h1>
-};
+    const loadWordpressAdmin = () => window.location.href = "http://yogakamala.jakubpiskorz.pl/wp-admin";
+    
+    return <button className="yoga-button" style={{marginLeft: "40px"}} onClick={loadWordpressAdmin}>Click to login</button>
+}
 
-export default Edytuj;
+export default Edytuj
