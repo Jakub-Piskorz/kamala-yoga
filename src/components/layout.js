@@ -26,7 +26,7 @@ const Layout = ({ isHomePage, children }) => {
     <div className="global-wrapper" data-is-root-path={isHomePage}>
       <header className="header">
         <a className="skip-link screen-reader-text" href="/">
-          Kamala Yoga
+          YOGA KAMALA
         </a>
         <div className="main-menu">
           <ul>
