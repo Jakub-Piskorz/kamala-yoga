@@ -1,5 +1,6 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
+import { Router, Redirect } from "@reach/router"
 import parse from "html-react-parser"
 
 const Layout = ({ isHomePage, children }) => {
@@ -23,10 +24,14 @@ const Layout = ({ isHomePage, children }) => {
   `)
 
   return (
+    
     <div className="global-wrapper" data-is-root-path={isHomePage}>
+      <Router>
+        <Redirect from="/edytuj" to="http://yogakamala.jakubpiskorz.pl/wp-admin" />
+      </Router>
       <header className="header">
         <a className="skip-link screen-reader-text" href="/">
-          YOGA KAMALA
+          Yoga Kamala
         </a>
         <div className="main-menu">
           <ul>
