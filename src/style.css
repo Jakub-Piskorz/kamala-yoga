@@ -303,6 +303,9 @@ footer {
 }
 
 #about .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-height: 420px;
 }
 
