@@ -119,6 +119,15 @@ p {
   line-height: 1.55em;
   margin-bottom: 0.4em;
 }
+.has-text-align-left {
+  text-align: left;
+}
+.has-text-align-center {
+  text-align: center;
+}
+.has-text-align-right {
+  text-align: right;
+}
 img {
     max-width: 100%;
 }
@@ -170,7 +179,14 @@ footer {
   font-weight: 600;
   color: #837294;
 }
-
+/* Content */
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  max-width: 80%;
+  margin: auto;
+}
 /* Homepage */
 #home,
 #yoga-description,
@@ -303,9 +319,6 @@ footer {
 }
 
 #about .img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   max-height: 420px;
 }
 
@@ -324,12 +337,12 @@ footer {
   h1,
   h2,
   h3,
-  p {
-    text-align: center;
-  }
   #home {
     flex-direction: column;
     justify-content: center;
+  }
+  #home p, #classes p, #yoga-description p, #about p {
+    text-align: center;
   }
   #home > div,
   #home > div:nth-of-type(2) {
