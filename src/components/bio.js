@@ -7,17 +7,23 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+// import profilePic from "../../content/profilepic.jpg"
+import Img from "gatsby-image"
 
 const Bio = () => {
-  const { author } = useStaticQuery(graphql`
+  const { author, file } = useStaticQuery(graphql`
     query BioQuery {
       # if there was more than one user, this would need to be filtered
       author: wpUser {
         firstName
         twitter: name
         description
-        avatar {
-          url
+      }
+      file(relativePath: { eq: "profilepic.jpg" }) {
+        childImageSharp {
+          fixed(width: 80, height: 80, quality: 100) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }
@@ -27,26 +33,23 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      {avatarUrl && (
-        <img
-          alt={author?.firstName || ``}
-          className="bio-avatar"
-          src={avatarUrl}
-        />
-      )}
-      {author?.firstName && (
-        <p>
-          Written by <strong>{author.firstName}</strong>
-          {` `}
-          {author?.description || null}
-          {` `}
-          {author?.twitter && (
-            <a href={`https://twitter.com/${author?.twitter || ``}`}>
-              You should follow them on Twitter
-            </a>
-          )}
-        </p>
-      )}
+      <Img
+        fixed={file.childImageSharp.fixed}
+        objectFit="cover"
+        objectPosition="50% 50%"
+        alt=""
+        style={{ borderRadius: "20px", marginRight: "20px" }}
+      />
+      <p style={{textAlign: "left"}}>
+        Written by {author.firstName}.<br/>
+        {` `}
+        {author?.description || null}
+        {` `}
+        You can follow me on{" "}
+        <a href={`https://www.instagram.com/yogakamala2020/`}>
+          Instagram
+        </a> or <a href={`https://www.tiktok.com/@yogakamala22`}>TikTok</a>)
+      </p>
     </div>
   )
 }

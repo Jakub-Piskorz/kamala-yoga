@@ -27,29 +27,26 @@ const BlogIndex = ({
 
   return (
     <Layout isHomePage>
-      <div className="main-size">
+      <div className="main-size post">
         <SEO title="All posts" />
-
-        <Bio />
-
         <ol style={{ listStyle: `none` }}>
           {posts.map(post => {
             const title = post.title
 
             return (
-              <li key={post.uri} style={{marginBottom: "80px"}}>
+              <li key={post.uri} style={{ marginBottom: "50px" }}>
                 <article
                   className="post-list-item"
                   itemScope
                   itemType="http://schema.org/Article"
                 >
                   {/* <header> */}
-                    <h3>
-                      <Link to={post.uri} itemProp="url">
-                        <span itemProp="headline">{parse(title)}</span>
-                      </Link>
-                    </h3>
-                    <small>{post.date}</small>
+                  <h3>
+                    <Link to={post.uri} itemProp="url">
+                      <span itemProp="headline">{parse(title)}</span>
+                    </Link>
+                  </h3>
+                  <small>{post.date}</small>
                   {/* </header> */}
                   <section itemProp="description">
                     {parse(post.excerpt)}
@@ -58,6 +55,7 @@ const BlogIndex = ({
               </li>
             )
           })}
+          <Bio />
         </ol>
 
         {previousPagePath && (

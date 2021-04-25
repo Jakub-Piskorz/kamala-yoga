@@ -22,7 +22,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
       <SEO title={post.title} description={post.excerpt} />
 
       <article
-        className="blog-post main-size"
+        className="blog-post main-size post"
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -45,9 +45,9 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
 
         <hr />
 
-        <footer>
+        <div>
           <Bio />
-        </footer>
+        </div>
       </article>
 
       <nav className="blog-post-nav">

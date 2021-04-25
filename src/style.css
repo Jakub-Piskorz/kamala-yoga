@@ -3,7 +3,7 @@
 
 /* General */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
   width: 100%;
@@ -129,25 +129,25 @@ p {
   text-align: right;
 }
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 /* Header */
 header {
-    width: 1200px;
-    max-width: 80%;
-    margin: auto;
-    padding-top: 2.4em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 1200px;
+  max-width: 80%;
+  margin: auto;
+  padding-top: 2.4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 header > a {
-    font-size: 2.6em;
-    color: #a341ff;
-    font-weight: 600;
+  font-size: 2.6em;
+  color: #a341ff;
+  font-weight: 600;
 }
 header > a:hover {
-    color: #b76aff;
+  color: #b76aff;
 }
 .main-menu {
   display: flex;
@@ -162,11 +162,11 @@ header > a:hover {
   color: initial;
 }
 .main-menu ul li a {
-    color: black;
-    margin-left: 1em;
+  color: black;
+  margin-left: 1em;
 }
 .main-menu ul li a:hover {
-    color: rgb(147, 29, 216);
+  color: rgb(147, 29, 216);
 }
 /* Footer */
 footer {
@@ -190,7 +190,8 @@ footer {
 /* Homepage */
 #home,
 #yoga-description,
-#classes, .main-size {
+#classes,
+.main-size {
   display: flex;
   flex-direction: column;
   width: 1200px;
@@ -322,6 +323,22 @@ footer {
   max-height: 420px;
 }
 
+/* Gatsby specific styles */
+.bio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.post {
+  margin-top: 50px;
+}
+.post h3,
+.post h2,
+.post h1 {
+  margin-bottom: 0px;
+  font-size: 2em;
+}
+
 @media screen and (max-width: 1600px) {
   body {
     font-size: 19px;
@@ -341,7 +358,10 @@ footer {
     flex-direction: column;
     justify-content: center;
   }
-  #home p, #classes p, #yoga-description p, #about p {
+  #home p,
+  #classes p,
+  #yoga-description p,
+  #about p {
     text-align: center;
   }
   #home > div,
