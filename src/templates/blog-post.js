@@ -50,7 +50,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         </div>
       </article>
 
-      <nav className="blog-post-nav">
+      <nav className="blog-post-nav main-size">
         <ul
           style={{
             display: `flex`,
