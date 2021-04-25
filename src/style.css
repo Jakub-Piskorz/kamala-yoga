@@ -190,7 +190,7 @@ footer {
 /* Homepage */
 #home,
 #yoga-description,
-#classes {
+#classes, .main-size {
   display: flex;
   flex-direction: column;
   width: 1200px;

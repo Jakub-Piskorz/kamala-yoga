@@ -27,43 +27,47 @@ const BlogIndex = ({
 
   return (
     <Layout isHomePage>
-      <SEO title="All posts" />
+      <div className="main-size">
+        <SEO title="All posts" />
 
-      <Bio />
+        <Bio />
 
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.title
+        <ol style={{ listStyle: `none` }}>
+          {posts.map(post => {
+            const title = post.title
 
-          return (
-            <li key={post.uri}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.uri} itemProp="url">
-                      <span itemProp="headline">{parse(title)}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.date}</small>
-                </header>
-                <section itemProp="description">{parse(post.excerpt)}</section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+            return (
+              <li key={post.uri} style={{marginBottom: "80px"}}>
+                <article
+                  className="post-list-item"
+                  itemScope
+                  itemType="http://schema.org/Article"
+                >
+                  {/* <header> */}
+                    <h3>
+                      <Link to={post.uri} itemProp="url">
+                        <span itemProp="headline">{parse(title)}</span>
+                      </Link>
+                    </h3>
+                    <small>{post.date}</small>
+                  {/* </header> */}
+                  <section itemProp="description">
+                    {parse(post.excerpt)}
+                  </section>
+                </article>
+              </li>
+            )
+          })}
+        </ol>
 
-      {previousPagePath && (
-        <>
-          <Link to={previousPagePath}>Previous page</Link>
-          <br />
-        </>
-      )}
-      {nextPagePath && <Link to={nextPagePath}>Next page</Link>}
+        {previousPagePath && (
+          <>
+            <Link to={previousPagePath}>Previous page</Link>
+            <br />
+          </>
+        )}
+        {nextPagePath && <Link to={nextPagePath}>Next page</Link>}
+      </div>
     </Layout>
   )
 }

@@ -12,6 +12,7 @@ const chunk = require(`lodash/chunk`)
  * See https://www.gatsbyjs.com/docs/node-apis/#createPages for more info.
  */
 exports.createPages = async gatsbyUtilities => {
+
   // Query our posts from the GraphQL server
   const posts = await getPosts(gatsbyUtilities)
 
@@ -32,7 +33,8 @@ exports.createPages = async gatsbyUtilities => {
  */
 const createIndividualBlogPostPages = async ({ posts, gatsbyUtilities }) =>
   Promise.all(
-    posts.map(({ previous, post, next }) =>
+    posts.map(({ previous, post, next }) => {
+      console.log(`New post!!!! ${post.uri}`)
       // createPage is an action passed to createPages
       // See https://www.gatsbyjs.com/docs/actions#createPage for more info
       gatsbyUtilities.actions.createPage({
@@ -56,6 +58,7 @@ const createIndividualBlogPostPages = async ({ posts, gatsbyUtilities }) =>
           nextPostId: next ? next.id : null,
         },
       })
+    }
     )
   )
 
@@ -88,7 +91,7 @@ async function createBlogPostArchive({ posts, gatsbyUtilities }) {
           // we want the first page to be "/" and any additional pages
           // to be numbered.
           // "/blog/2" for example
-          return page === 1 ? `/` : `/blog/${page}`
+          return page === 1 ? `/blog` : `/blog/${page}`
         }
 
         return null

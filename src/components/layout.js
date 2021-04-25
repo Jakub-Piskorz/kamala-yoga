@@ -4,31 +4,9 @@ import { Router, Redirect } from "@reach/router"
 import parse from "html-react-parser"
 
 const Layout = ({ isHomePage, children }) => {
-  const {
-    wp: {
-      generalSettings: { title },
-    },
-    wpPage: { content: content },
-  } = useStaticQuery(graphql`
-    query LayoutQuery {
-      wp {
-        generalSettings {
-          title
-          description
-        }
-      }
-      wpPage(title: { eq: "Homepage" }) {
-        content
-      }
-    }
-  `)
 
   return (
-    
     <div className="global-wrapper" data-is-root-path={isHomePage}>
-      <Router>
-        <Redirect from="/edytuj" to="http://yogakamala.jakubpiskorz.pl/wp-admin" />
-      </Router>
       <header className="header">
         <a className="skip-link screen-reader-text" href="/">
           Yoga Kamala
@@ -47,7 +25,7 @@ const Layout = ({ isHomePage, children }) => {
           </ul>
         </div>
       </header>
-      <div dangerouslySetInnerHTML={{ __html: content }}></div>
+      {children}
       <footer>
         Created by{" "}
         <a href="http://jakubpiskorz.pl" target="_blank">

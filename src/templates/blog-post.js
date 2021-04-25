@@ -22,11 +22,10 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
       <SEO title={post.title} description={post.excerpt} />
 
       <article
-        className="blog-post"
+        className="blog-post main-size"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
           <h1 itemProp="headline">{parse(post.title)}</h1>
 
           <p>{post.date}</p>
@@ -39,7 +38,6 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
               style={{ marginBottom: 50 }}
             />
           )}
-        </header>
 
         {!!post.content && (
           <section itemProp="articleBody">{parse(post.content)}</section>
@@ -99,7 +97,6 @@ export const pageQuery = graphql`
       content
       title
       date(formatString: "MMMM DD, YYYY")
-
       featuredImage {
         node {
           altText
@@ -113,13 +110,11 @@ export const pageQuery = graphql`
         }
       }
     }
-
     # this gets us the previous post by id (if it exists)
     previous: wpPost(id: { eq: $previousPostId }) {
       uri
       title
     }
-
     # this gets us the next post by id (if it exists)
     next: wpPost(id: { eq: $nextPostId }) {
       uri
