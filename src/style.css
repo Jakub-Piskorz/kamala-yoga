@@ -41,6 +41,12 @@ a {
 a:hover {
   color: #6e50f5;
 }
+button > a {
+  color: unset
+}
+button > a:hover {
+  color: unset
+}
 p:empty {
   display: none;
 }
