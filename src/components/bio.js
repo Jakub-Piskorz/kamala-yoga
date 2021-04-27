@@ -37,6 +37,7 @@ const Bio = () => {
         fixed={file.childImageSharp.fixed}
         objectFit="cover"
         objectPosition="50% 50%"
+        
         alt=""
       />
       <p style={{textAlign: "left"}}>
@@ -47,7 +48,7 @@ const Bio = () => {
         You can follow me on{" "}
         <a href={`https://www.instagram.com/yogakamala2020/`}>
           Instagram
-        </a> or <a href={`https://www.tiktok.com/@yogakamala22`}>TikTok</a>)
+        </a> or <a href={`https://www.tiktok.com/@yogakamala22`}>TikTok</a>.
       </p>
     </div>
   )
