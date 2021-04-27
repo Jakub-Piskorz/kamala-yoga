@@ -38,7 +38,6 @@ const Bio = () => {
         objectFit="cover"
         objectPosition="50% 50%"
         alt=""
-        style={{ borderRadius: "20px", marginRight: "20px" }}
       />
       <p style={{textAlign: "left"}}>
         Written by {author.firstName}.<br/>

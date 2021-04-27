@@ -124,6 +124,7 @@ p {
   letter-spacing: 0.03em;
   line-height: 1.55em;
   margin-bottom: 0.4em;
+  word-break: break-word;
 }
 .has-text-align-left {
   text-align: left;
@@ -157,7 +158,7 @@ header > a:hover {
 }
 .main-menu {
   display: flex;
-  height: 100px;
+  height: 4em;
   flex-direction: row;
   align-items: center;
   font-size: 1.4em;
@@ -304,7 +305,7 @@ footer {
   display: flex;
   flex-direction: row;
   width: 1200px;
-  padding: 85px 0 120px;
+  padding: 4em 0 6em;
   margin: auto;
   max-width: calc(100% - 100px);
 }
@@ -335,14 +336,26 @@ footer {
   flex-direction: row;
   align-items: center;
 }
+.bio .gatsby-image-wrapper {
+  border-radius: 20px;
+  margin-right: 20px;
+  min-width: 80px;
+}
 .post {
-  margin-top: 50px;
+  /* margin-top: 1em; */
+}
+.post ol {
+  padding-left: 0;
 }
 .post h3,
 .post h2,
 .post h1 {
   margin-bottom: 0px;
   font-size: 2em;
+}
+.blog-post-nav {
+  margin-top: 2em;
+  margin-bottom: 4em;
 }
 
 @media screen and (max-width: 1600px) {
@@ -365,7 +378,9 @@ footer {
     justify-content: center;
   }
   #home p,
+  #home h1,
   #classes p,
+  #classes h2,
   #yoga-description p,
   #about p {
     text-align: center;
@@ -418,7 +433,7 @@ footer {
     width: 100%;
   }
   #about .img {
-    width: 50%;
+    max-width: 80%;
     height: auto;
     object-fit: contain;
     margin: auto;
@@ -428,11 +443,15 @@ footer {
   }
 }
 @media screen and (max-width: 800px) {
+  header {
+    flex-direction: column;
+  }
+
   body {
     font-size: 16px;
   }
-  header > a {
-    font-size: 1.5em;
+  .main-menu {
+    height: 3em;
   }
   .main-menu a {
     font-size: 0.8em;
@@ -440,6 +459,12 @@ footer {
   h1,
   h2 {
     font-size: 2.5rem;
+  }
+  #home {
+    margin-top: 1em;
+  }
+  #classes {
+    padding: 2em 0;
   }
   #classes > div {
     flex-direction: column;
@@ -451,5 +476,11 @@ footer {
   }
   #classes > div > div:nth-of-type(1) {
     margin-bottom: 4em;
+  }
+  #about {
+    margin: 0;  
+  }
+  #about h2 {
+    margin-bottom: 0.5em;
   }
 }
