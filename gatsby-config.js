@@ -26,7 +26,8 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
-        url: process.env.WPGRAPHQL_URL || `http://yogakamala.jakubpiskorz.pl/graphql`,
+        url:
+          process.env.WPGRAPHQL_URL || `https://yoga.jakubpiskorz.dev/graphql`,
         develop: {
           //caches media files outside of Gatsby's default cache an thus allows them to persist through a cache reset.
           hardCacheMediaFiles: true,
@@ -60,8 +61,8 @@ module.exports = {
       // See https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/?=gatsby-plugin-manifest
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Kamala Yoga`,
-        short_name: `Kamala Yoga`,
+        name: `Yoga Kamala`,
+        short_name: `Yoga Kamala`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#4c2dd4`,
