@@ -4,7 +4,6 @@ import { Router, Redirect } from "@reach/router"
 import parse from "html-react-parser"
 
 const Layout = ({ isHomePage, children }) => {
-
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
       <header className="header">
@@ -28,7 +27,7 @@ const Layout = ({ isHomePage, children }) => {
       {children}
       <footer>
         Created by{" "}
-        <a href="http://jakubpiskorz.pl" target="_blank">
+        <a href="http://jakubpiskorz.dev" target="_blank">
           Jakub Piskorz
         </a>
         , powered by{" "}
