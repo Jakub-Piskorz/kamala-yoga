@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { Router, Redirect } from "@reach/router"
 import parse from "html-react-parser"
+import Menu from "./menu"
 
 const Layout = ({ isHomePage, children }) => {
   return (
@@ -10,19 +11,7 @@ const Layout = ({ isHomePage, children }) => {
         <a className="skip-link screen-reader-text" href="/">
           Yoga Kamala
         </a>
-        <div className="main-menu">
-          <ul>
-            <li>
-              <Link to="/">HOME</Link>
-            </li>
-            <li>
-              <Link to="/about">ABOUT</Link>
-            </li>
-            <li>
-              <Link to="/blog">BLOG</Link>
-            </li>
-          </ul>
-        </div>
+        <Menu />
       </header>
       {children}
       <footer>
