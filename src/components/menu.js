@@ -6,6 +6,9 @@ const Menu = props => {
         nodes: { ..._menuItems },
       },
     },
+    wp: {
+      allSettings: { generalSettingsUrl: wpURL },
+    },
   } = useStaticQuery(graphql`
     query {
       wpMenu(slug: { eq: "main-menu" }) {
@@ -17,16 +20,18 @@ const Menu = props => {
           }
         }
       }
+      wp {
+        allSettings {
+          generalSettingsUrl
+        }
+      }
     }
   `)
   let menuItems = []
   Object.keys(_menuItems).map((item, index) => {
     menuItems.push(_menuItems[index])
     // replacing Wordpress URLs with Gatsby URLs
-    menuItems[index].url = menuItems[index].url.replace(
-      "https://yoga.jakubpiskorz.dev",
-      ""
-    )
+    menuItems[index].url = menuItems[index].url.replace(wpURL, "")
   })
   return (
     <div className="main-menu">
