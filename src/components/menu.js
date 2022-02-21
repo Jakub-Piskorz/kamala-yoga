@@ -1,4 +1,5 @@
 import { Link, useStaticQuery, graphql } from "gatsby"
+import React from "react";
 const Menu = props => {
   const {
     wpMenu: {
