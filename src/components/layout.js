@@ -11,7 +11,6 @@ const Layout = ({ isHomePage, children }) => {
   }, [])
   useEffect(() => {
     AOS && AOS.refresh()
-    console.log("lol")
   })
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
