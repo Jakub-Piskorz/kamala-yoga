@@ -1,10 +1,18 @@
-import React from "react"
+import React, { useEffect } from "react"
+import AOS from "aos"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { Router, Redirect } from "@reach/router"
 import parse from "html-react-parser"
 import Menu from "./menu"
 
 const Layout = ({ isHomePage, children }) => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+  useEffect(() => {
+    AOS && AOS.refresh()
+    console.log("lol")
+  })
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
       <header className="header">

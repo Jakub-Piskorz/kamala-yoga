@@ -1,5 +1,6 @@
 @import "fonts/century-gothic/century-gothic.css";
 @import "fonts/lexend/lexend.css";
+@import "./aos.css";
 
 /* General */
 * {
@@ -42,10 +43,10 @@ a:hover {
   color: #6e50f5;
 }
 button > a {
-  color: unset
+  color: unset;
 }
 button > a:hover {
-  color: unset
+  color: unset;
 }
 p:empty {
   display: none;
@@ -478,7 +479,7 @@ footer {
     margin-bottom: 4em;
   }
   #about {
-    margin: 0;  
+    margin: 0;
   }
   #about h2 {
     margin-bottom: 0.5em;
