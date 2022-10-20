@@ -15,7 +15,9 @@ body {
   font-style: normal;
   font-size: 21px;
 }
-
+main {
+  overflow-x: hidden; 
+}
 h1 {
   font-size: 3.4em;
   color: #252525;
